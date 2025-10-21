@@ -1,0 +1,7 @@
+# CP468 Assignment 2 - Sudoku as a CSP
+# Python package requirements
+
+# Add required packages here as needed
+# Example:
+# numpy>=1.21.0
+# matplotlib>=3.4.0
