@@ -17,7 +17,7 @@ This assignment involves representing Sudoku as a Constraint Satisfaction Proble
 - CSP representation of Sudoku puzzle
 - Variables, domains, and binary constraints definition
 
-### `src/person_b/` - AC-3 Algorithm Developer
+### `src/person_b/` - AC-3 Algorithm Developer (Sam)
 **Marks: 25**
 - AC-3 algorithm implementation
 - Queue tracking and arc consistency enforcement
