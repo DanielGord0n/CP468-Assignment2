@@ -1,4 +1,0 @@
-Puzzle,Steps_to_Consistency,Avg_Queue_Length,Max_Queue_Length,AC3_Consistent,Solved_by_AC3,Used_Secondary_Solver,Secondary_Success,AC3_Time_s,Total_Time_s,Final_Solved
-Easy,   7681,                3185.09,         5966,            True,          False,        True,                 False,            0.1485,    0.1541,      False
-Medium, 7833,                3304.85,         6169,            True,          False,        True,                 True,             0.1886,    0.1938,      True
-Hard,   7016,                2938.62,         5395,            True,          False,        True,                 False,            0.1163,    0.1262,      False
