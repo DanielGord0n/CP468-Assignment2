@@ -1,22 +1,18 @@
 """
 Person B - AC-3 Algorithm Demo
-Runs the AC-3 algorithm on two Sudoku puzzles using Person A’s CSP model.
 """
 
 import sys
 import os
 from collections import deque
 
-# --- Make sure we can import from the src/ folder ---
+# Join path folders to person a
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..')))
-
-# Now imports will work no matter where this file is run from
 from src.person_a.csp_model import SudokuCSP
 from src.person_b.ac3 import ac3, print_queue_log
 
-# ------------------------------
+
 # Helper: print Sudoku grid
-# ------------------------------
 def print_puzzle(puzzle):
     for i, row in enumerate(puzzle):
         if i % 3 == 0 and i != 0:
@@ -28,9 +24,7 @@ def print_puzzle(puzzle):
             row_str += (str(val) if val != 0 else ".") + " "
         print(row_str)
 
-# ------------------------------
 # Demo Runner
-# ------------------------------
 def run_demo(puzzles):
     for n, puzzle in enumerate(puzzles, start=1):
         print("\n========================")
@@ -49,9 +43,7 @@ def run_demo(puzzles):
         print(f"Solved: {is_solved}")
         print_queue_log(queue_log, limit=5)
 
-# ------------------------------
-# Example puzzles (replace during demo)
-# ------------------------------
+# Example puzzles (replace during live meeting)
 puzzle1 = [
     [5, 3, 0, 0, 7, 0, 0, 0, 0],
     [6, 0, 0, 1, 9, 5, 0, 0, 0],
