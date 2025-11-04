@@ -26,9 +26,11 @@ def backtrack(csp, stats):
             csp.domains[var] = {value}
             stats['assignment_count'] += 1
             
-            # Recurse
-            if backtrack(csp, stats):
-                return True
+            # Forward checking: remove this value from neighbors' domains
+            if forward_check(csp, var, value):
+                # Recurse
+                if backtrack(csp, stats):
+                    return True
             
             # Restore domains on failure
             csp.domains = saved_domains
@@ -52,6 +54,20 @@ def is_consistent(csp, var, value):
             if value == list(csp.domains[neighbor])[0]:
                 return False
     
+    return True
+
+
+def forward_check(csp, var, value):
+    """
+    Remove the assigned value from all neighbors' domains.
+    Return False if any domain becomes empty (inconsistency detected).
+    """
+    for neighbor in csp.get_neighbors(var):
+        if len(csp.domains[neighbor]) > 1:
+            if value in csp.domains[neighbor]:
+                csp.domains[neighbor].discard(value)
+                if len(csp.domains[neighbor]) == 0:
+                    return False  # Domain wipeout - inconsistency
     return True
 
 
