@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 """
 Person C - Input Handler & Visual Logger
 Sudoku input parsing and queue tracking utilities
@@ -19,6 +18,3 @@ __all__ = [
     "is_grid_complete",
     "copy_grid",
 ]
-=======
-# Person C - Input Handler and Visual Logger
->>>>>>> 2324e6f0191f246867cd308a54f54742c1dc4f6f
